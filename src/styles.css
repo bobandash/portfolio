@@ -16,6 +16,7 @@ body {
   --secondary-color: #4dfff3;
   --bg-color:  #051622;
   --default-font: 'Inter', sans-serif;
+  --descriptive-color: #bebebe;
 }
 
 body {
@@ -26,6 +27,34 @@ body {
 * {
   color: var(--primary-color);
   font-family: var(--default-font);
+}
+
+/* css for section headers */
+.section-header-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.section-header-container h2 {
+  text-align: center;
+  padding: 0 10px;
+  font-weight: bold;
+  color: var(--heading-color);
+  font-size: 28px;
+  background-color: var(--bg-color);
+}
+
+.section-header-container::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  border-top: 3px solid var(--secondary-color);
+  z-index: -1;
 }
 
 /* css for header */
@@ -60,9 +89,98 @@ header {
   transform: scale(2);
 }
 
+/* css for introduction */
+.introduction {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
 
+.introduction p {
+  font-size: 18px;
+  margin-bottom: 0px;
+}
 
+.introduction h1 {
+  margin: 12px 0px;
+  font-size: 48px;
+  font-weight: bold;
+}
 
+.identities ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.identities ul li {
+  font-size: 30px;
+}
+
+/* css for projects */
+.projects > .project h3 {
+  margin-top: 10px;
+}
+
+.projects > .project:not(:first-child) h3 {
+  margin-top: 20px;
+}
+
+.project-name {
+  font-size: 30px;
+  margin-bottom: 6px;
+}
+
+.project-subheader {
+  margin-top: 0px;
+  font-weight: normal;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: var(--descriptive-color);
+}
+
+.project-image-container {
+  width: 100%;
+}
+
+.project-image-container > img {
+  display: block;
+  max-width: 100%;
+}
+
+.project-summary-header {
+  font-size: 24px;
+  margin-top: 18px;
+  margin-bottom: 12px;
+}
+
+.project-details p {
+  color: var(--descriptive-color);
+}
+
+.summary-text {
+  margin-top: 6px;
+  margin-bottom: 24px;
+}
+
+.summary-text > p:first-child {
+  margin-top: 0px;
+  margin-bottom: 6px;
+}
+
+.summary-text > p:last-child {
+  margin-top: 4px;
+  margin-bottom: 0px;
+}
+
+.project-links {
+  text-align: right;
+}
+
+.project-links a {
+  padding: 2px 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
 
 @media only screen and (min-width:641px)  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
 { 
