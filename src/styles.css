@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+
+body, html {
+  margin: 0;
+}
+
+body {
+  margin: 0 auto;
+  width: 85%;
+  max-width: 1400px;
+}
+
+:root {
+  --primary-color: white;
+  --heading-color: #FDC78E;
+  --secondary-color: #4dfff3;
+  --bg-color:  #051622;
+  --default-font: 'Inter', sans-serif;
+}
+
+body {
+  background-color: rgba(5, 22 , 34);
+}
+
+/* generic color, unless overrode */
+* {
+  color: var(--primary-color);
+  font-family: var(--default-font);
+}
+
+/* css for header */
+
+header * {
+  color: var(--secondary-color);
+}
+
+.portfolio-logo {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+header {
+  display: flex;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  position: sticky;
+  top: 0;
+  background-color:rgba(5, 22 , 34)
+}
+
+.nav-elements {
+  margin: 0 0 0 auto;
+  display: none !important;
+}
+
+.hamburger-menu {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  transform: scale(2);
+}
+
+
+
+
+
+@media only screen and (min-width:641px)  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+{ 
+  .nav-elements {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .nav-elements > ul {
+    margin: 0;
+    display: flex;
+  }
+  
+  .nav-elements ul li {
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 18px;
+  }
+  
+  .nav-elements ul li:not(:first-child) {
+    margin-left: 24px;
+  }
+  
+  .nav-elements ul {
+    list-style: none 
+  }
+
+  .hamburger-menu {
+    display: none !important;
+  }
+}
+@media only screen and (min-width:1025px) /* big landscape tablets, laptops, and desktops */
+{ 
+  header { 
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .portfolio-logo {
+    font-size: 48px;
+  }
+
+/*   for header */
+  .nav-elements ul li:not(:first-child) {
+    margin-left: 36px;
+  }
+
+  .nav-elements ul li {
+    font-size: 20px;
+  }
+}
+@media (min-width:1281px) /* hi-res laptops and desktops */
+{
+  header { 
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .nav-elements ul li:not(:first-child) {
+    margin-left: 60px;
+  }
+
+}
