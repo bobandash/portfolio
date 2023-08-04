@@ -23,6 +23,10 @@ body {
   background-color: rgba(5, 22 , 34);
 }
 
+a {
+  text-decoration: none;;
+}
+
 /* generic color, unless overrode */
 * {
   color: var(--primary-color);
@@ -182,6 +186,26 @@ header {
   border-radius: 5px;
 }
 
+/* for the social links */
+
+.social-links {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  margin-bottom: 52px;
+}
+
+.social-links a {
+  display: flex;
+  text-decoration: none;
+}
+
+.social-links a i {
+  transform: scale(1.3);
+}
+
+
 @media only screen and (min-width:641px)  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
 { 
   .nav-elements {
@@ -242,5 +266,4 @@ header {
   .nav-elements ul li:not(:first-child) {
     margin-left: 60px;
   }
-
 }
