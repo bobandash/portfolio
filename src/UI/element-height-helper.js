@@ -16,8 +16,9 @@ const height = (() => {
   // Contact section does not take up the whole view port, so the process for calculating the Y is different
   // TO-DO - contact doesn't go down to the bottom of the screen
   function getContactSectionY(){
+    const headerHeight = getHeaderHeight();
     const contactSection = document.querySelector('.contact');
-    const contactSectionY = contactSection.getBoundingClientRect().y + contactSection.getBoundingClientRect().height - window.innerHeight;
+    const contactSectionY = window.scrollY + contactSection.getBoundingClientRect().y - headerHeight;
     return contactSectionY;
   }
 
