@@ -10,13 +10,27 @@ body {
   max-width: 1400px;
 }
 
+section {
+  min-height: 90vh;
+}
+
 :root {
   --primary-color: white;
-  --heading-color: #FDC78E;
   --secondary-color: #4dfff3;
+  --line-color: #FDC78E;
   --bg-color:  #051622;
   --default-font: 'Inter', sans-serif;
   --descriptive-color: #bebebe;
+  --aside-bg-color:  darkcyan;
+  --mobile-p-font: 24px;
+}
+
+.red {
+  color: red;
+}
+
+.fixed {
+  position: fixed;
 }
 
 body {
@@ -29,6 +43,10 @@ a {
 
 a:hover {
   cursor: pointer;
+}
+
+.hide {
+  opacity: 0;
 }
 
 /* generic color, unless overrode */
@@ -50,7 +68,7 @@ a:hover {
   text-align: center;
   padding: 0 10px;
   font-weight: bold;
-  color: var(--heading-color);
+  color: var(--secondary-color);
   font-size: 28px;
   background-color: var(--bg-color);
 }
@@ -61,8 +79,56 @@ a:hover {
   top: 50%;
   left: 0;
   right: 0;
-  border-top: 3px solid var(--secondary-color);
+  border-top: 3px solid var(--line-color);
   z-index: -1;
+}
+
+.highlight {
+  color: white !important;
+}
+
+/* css for mobile sidebar */
+aside {
+  height: 100vh;
+  position: fixed;
+  width: 60vw;
+  right: 0;
+  z-index: 1001;
+  background-color: var(--aside-bg-color);
+  box-shadow: -3px 0px 3px 1px black;
+  transition: width 0.1s ease-out;
+}
+
+aside.hidden {
+  width: 0vw;
+  visibility: hidden;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.hide-sidebar {
+  position: relative;
+  top: 15;
+  left: 20;
+}
+
+aside ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+aside ul li {
+  text-align: center;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+aside ul li:first-child {
+  margin-top: 36px;
 }
 
 /* css for header */
@@ -86,6 +152,19 @@ header {
   z-index: 1000;
 }
 
+header ul li:hover, .portfolio-logo:hover{
+  cursor: pointer;
+}
+
+header ul li {
+  translate: text-decoration 1s ease-in 0.25s;
+}
+
+header ul li:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+
 .nav-elements {
   margin: 0 0 0 auto;
   display: none !important;
@@ -104,6 +183,10 @@ header {
   padding-bottom: 12px;
 }
 
+.introduction > * {
+  width: fit-content;
+}
+
 .introduction p {
   font-size: 18px;
   margin-bottom: 0px;
@@ -115,13 +198,9 @@ header {
   font-weight: bold;
 }
 
-.identities ul {
+.identities-text {
   margin: 0;
   padding-left: 0;
-  list-style: none;
-}
-
-.identities ul li {
   font-size: 30px;
 }
 
@@ -211,9 +290,8 @@ header {
 
 @media only screen and (min-width:700px)  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
 { 
-  header { 
-    height: 10vh;
-    padding: 0;
+  header {
+    padding: 20px 0px;
   }
 
   .portfolio-logo {
@@ -242,7 +320,7 @@ header {
   }
   
   .nav-elements ul {
-    list-style: none 
+    list-style: none;
   }
 
   .hamburger-menu {
@@ -259,7 +337,6 @@ header {
   /*css for introduction */ 
   .introduction {
     box-sizing: border-box;
-    height: 90vh;
     display: flex;
     flex-direction: column;
     padding-bottom: 15vh;
@@ -277,12 +354,8 @@ header {
     font-size: 90px;
   }
 
-  .identities ul li {
+ .identities-text {
     font-size: 48px;
-  }
-
-  .about {
-    min-height: 85vh;
   }
 
   .about-content {
@@ -346,7 +419,7 @@ header {
     font-size: 120px;
   }
 
-  .identities ul li {
+  .identities-text {
     font-size: 66px;
   }
 

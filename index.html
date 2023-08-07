@@ -7,14 +7,23 @@
 <!--   TO:DO add favicon -->
 </head>
 <body>
+  <aside class = "hidden">
+    <button class = "hide-sidebar"><i class="red fa-solid fa-xmark"></i></button>
+    <ul>
+      <li data-mobile-nav-about>About</li>
+      <li data-mobile-nav-projects>Projects</li>
+      <li data-mobile-nav-contact>Contact</li>
+      <li data-mobile-nav-resume>Resume</li>
+    </ul>
+  </aside>
   <header>
     <nav class = "portfolio-logo">BH</nav>
     <nav class = "nav-elements">
       <ul>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
-        <li>Resume</li>
+        <li data-nav-about>About</li>
+        <li data-nav-project>Projects</li>
+        <li data-nav-contact>Contact</li>
+        <li data-nav-resume>Resume</li>
       </ul>
     </nav>
     <nav class = "hamburger-menu">
@@ -22,15 +31,9 @@
     </nav>
   </header>
   <section class = "introduction">
-    <p>Nice to meet you. I'm</p>
-    <h1>BRUCE HSU</h1>
-    <div class = "identities">
-      <ul>
-        <li>I code websites</li>
-        <li>I sell online</li>
-        <li>I make videos</li>
-      </ul>
-    </div>
+    <p class = "hide">Nice to meet you. I'm</p>
+    <h1 class = "hide">BRUCE HSU</h1>
+    <p class = "identities-text">I <span>code websites</span><span class = "hidden">sell online</span><span class = "hidden">make videos</span></p>
   </section>
   <section class = "about">
     <div class="section-header-container">
@@ -44,6 +47,26 @@
   <section class = "projects">
     <div class="section-header-container">
       <h2>Projects</h2>
+    </div>
+    <div class="project">
+      <h3 class = "project-name">Battleship</h3>
+      <h4 class = "project-subheader">Classic Board Game</h4>
+      <div class="project-image-and-details">
+        <div class = "project-image-container">
+          <img src = "./src/assets/battleship-project-image.png" alt = "battleship project github video">
+        </div>
+        <div class = "project-details">
+          <h4 class = "project-summary-header">Summary</h4>
+          <div class = "summary-text">
+            <p>This simple battleship web application used to practice Test Driven Development</p>
+            <p>Technologies: HTML, CSS, Vanilla JS</p>
+          </div>
+          <div class = "project-links">
+            <a href = "" target = "_blank">View Code</a>
+            <a href = "" target = "_blank">Live Preview</a>
+          </div> 
+        </div>
+      </div>
     </div>
     <div class="project">
       <h3 class = "project-name">Battleship</h3>
