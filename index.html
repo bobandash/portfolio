@@ -45,16 +45,26 @@
   </section>
   <section class = "about">
     <div class="section-header-container">
-      <h2>About</h2>
+      <h2 class = "animation-hide">About</h2>
     </div>
     <div class = "about-content">
-      <img src = "src/assets/bruce-picture.jpeg" alt = "bruce hsu professional photo">
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Atque qui, suscipit sequi reprehenderit exercitationem facere quam quod numquam maxime</p>
+      <picture>
+        <source media = "(max-width: 1280px)" srcset= "./src/assets/bruce-mobile-picture.jpg">
+        <source media = "(max-width:1399px)" srcset= "./src/assets/bruce-desktop-picture.jpg">
+        <source media = "(min-width: 1400px)" srcset = "./src/assets/bruce-desktop-picture-2.jpg">
+        <img src="./src/assets/bruce-desktop-picture-2.jpg">
+      </picture>
+      <p>I’m a UCLA alumnus who studied Business Economics. Truthfully, I don’t think I use my degree that much.
+        <br><br>
+        After I graduated and started working, I realized how powerful learning how to code is after I self-learned VBA and automated a lot of common operations for work.<br><br>Because of this, I’ve always wanted to dive deeper into programming. Right now, I’m 100% dedicated to improving my programming aptitude to have the tools to build whatever I want in the future.
+        <br><br>
+        If I’m not coding or working on anything productive, you can probably find me watching Colin and Samir or the Huberman Lab Podcast, reading manga, playing some Valorant, or going to the gym. 
+        </p>
     </div>
     </section>
   <section class = "projects">
     <div class="section-header-container">
-      <h2>Projects</h2>
+      <h2 class = "animation-hide">Projects</h2>
     </div>
     <div class="project">
       <h3 class = "project-name">Battleship</h3>
@@ -99,7 +109,7 @@
   </section>
   <section class = "contact">
     <div class="section-header-container">
-      <h2>Connect</h2>
+      <h2 class = "animation-hide">Connect</h2>
     </div>
     <p>I'm currently searching for a software engineer or E-Commerce specialist role!</p>
     <p>If you have any relevant opportunities, want to work on a project together, or just want to chat, feel free to reach out to me with my socials below!</p>
