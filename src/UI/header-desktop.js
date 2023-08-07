@@ -1,5 +1,6 @@
 import height from './element-height-helper'
 
+// Desktop header includes learn more about me section
 const desktopHeader = (() => {
   function unhighlightAllNavItems(){
     const navItems = Array.from(document.querySelectorAll('.nav-elements ul li'));
@@ -48,12 +49,20 @@ const desktopHeader = (() => {
 
     topLeftLogo.addEventListener('click', () => {
       unhighlightAllNavItems();
-      window.scrollTo(0, 0);
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+      });
     })
 
     aboutNavItem.addEventListener('click', () => {
       unhighlightAllNavItems();
-      window.scrollTo(0, aboutSectionY + 1);
+      window.scrollTo({
+        top: aboutSectionY + 1,
+        left: 0,
+        behavior: 'smooth',
+      });
       if(!aboutNavItem.classList.contains('highlight')){
         aboutNavItem.classList.add('highlight');
       }
@@ -61,7 +70,11 @@ const desktopHeader = (() => {
 
     projectNavItem.addEventListener('click', () => {
       unhighlightAllNavItems();
-      window.scrollTo(0, projectSectionY + 1);
+      window.scrollTo({
+        top: projectSectionY + 1,
+        left: 0,
+        behavior: 'smooth',
+      });
       if(!projectNavItem.classList.contains('highlight')){
         projectNavItem.classList.add('highlight');
       }
@@ -69,17 +82,34 @@ const desktopHeader = (() => {
 
     contactNavitem.addEventListener('click', () => {
       unhighlightAllNavItems();
-      window.scrollTo(0, contactSectionY + 1);
+      window.scrollTo({
+        top: contactSectionY + 1,
+        left: 0,
+        behavior: 'smooth',
+      });
       if(!contactNavitem.classList.contains('highlight')){
         contactNavitem.classList.add('highlight');
       }
     })
-   } 
+  }
+  
+  function addLearnAboutMeButtonRedirect(){
+    const learnAboutMeButton = document.querySelector('.learn-about-me > button');
+    learnAboutMeButton.addEventListener('click', () => {
+      const aboutMeSectionHeight = height.getAboutSectionY();
+      window.scrollTo({
+        top: aboutMeSectionHeight + 1,
+        left: 0,
+        behavior: 'smooth',
+      });
+    })
+  }
 
 
   function addAllFunctionality(){
     highlightHeaderNameAtSpecificSection();
     clickHeaderAndRedirect();
+    addLearnAboutMeButtonRedirect();
   }
 
   return {addAllFunctionality}
