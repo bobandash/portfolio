@@ -218,17 +218,24 @@ header ul li:hover {
   width: 100%;
 }
 
+.project:nth-of-type(n+3){
+  margin-top: 60px;
+}
+
+.project:nth-last-of-type(1){
+  margin-bottom: 16px;
+}
+
 /* css for projects */
 .project-name {
   font-size: 30px;
-  margin-bottom: 6px;
-  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .project-subheader {
   margin-top: 0px;
   font-weight: normal;
-  font-size: 20px;
   margin-bottom: 12px;
   color: var(--descriptive-color);
 }
@@ -243,13 +250,16 @@ header ul li:hover {
 }
 
 .project-summary-header {
-  font-size: 24px;
   margin-top: 18px;
   margin-bottom: 12px;
 }
 
 .project-details p {
   color: var(--descriptive-color);
+}
+
+.project-links a {
+  font-size: 16px;
 }
 
 .summary-text {
@@ -299,6 +309,10 @@ header ul li:hover {
 
 @media only screen and (min-width:700px)  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
 { 
+  p {
+    font-size: 18px;
+  }
+
   section {
     min-height: 90vh;
   }
@@ -402,35 +416,39 @@ header ul li:hover {
     font-size: 20px;
   }
 
-
-
  .identities-text {
     height: 100px;
     font-size: 48px;
   }
 
-  /*css for projects */
-  .project-image-and-details {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .project-image-and-details > *{
-    width: 47.5%;
-  }
-
-  .project-summary-header {
-    margin-top: 0px;
-  }
-
-  .about-content p {
+  .project-links a {
     font-size: 18px;
+  }
+
+  .project-name {
+    font-size: 36px;
+  }
+
+  .project-subheader, .project-summary-header {
+    font-size: 24px;
+  }
+
+  .summary-text {
+    margin-bottom: 30px;
+  }
+
+  .project-links a:nth-child(2){
+    margin-left: 5px;
   }
 
 }
 
 
 @media only screen and (min-width:840px) {
+  p {
+    font-size: 24px;
+  }
+
   .portfolio-logo {
     font-size: 48px;
   }
@@ -462,14 +480,32 @@ header ul li:hover {
 
   .about-content p {
     margin-top: 40px;
-    font-size: 26px;
   }
 
+  .project-links a {
+    font-size: 24px;
+  }
 
+  .project-name {
+    font-size: 50px;
+  }
+
+  .project-subheader, .project-summary-header {
+    font-size: 30px;
+  }
+
+  .project-links a:nth-child(2){
+    margin-left: 10px;
+  }
+  
 }
 
 @media (min-width:1281px) /* hi-res laptops and desktops */
 {
+  p {
+    font-size: 26px;
+  }
+
   header { 
     padding-top: 30px;
     padding-bottom: 30px;
@@ -477,10 +513,6 @@ header ul li:hover {
 
   .nav-elements ul li:not(:first-child) {
     margin-left: 60px;
-  }
-
-  p {
-    font-size: 24px;
   }
 
   .social-links {
@@ -492,7 +524,6 @@ header ul li:hover {
     transform: scale(4);
   }
 
-
   .about-content {
     display: flex;
     flex-direction: row;
@@ -503,9 +534,39 @@ header ul li:hover {
     width: 47.5% !important;
   }
 
+  /*css for projects */
+  .project-image-and-details {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .project-image-and-details > *{
+    width: 47.5%;
+  }
+
+  .project-summary-header {
+    margin-top: 0px;
+  }
+
   .about-content p {
     margin-top: 0;
-    font-size: 30px;
   }
+
+  .project-links a {
+    font-size: 26px;
+  }
+
+  .project-name {
+    font-size: 54px;
+  }
+
+  .project-subheader, .project-summary-header {
+    font-size: 32px;
+  }
+
+  .summary-text {
+    margin-bottom: 44px;
+  }
+
 }
 
