@@ -41,10 +41,6 @@ a:hover, button:hover {
   cursor: pointer;
 }
 
-.hide {
-  opacity: 0;
-}
-
 /* generic color, unless overrode */
 * {
   color: var(--primary-color);
@@ -202,11 +198,19 @@ header ul li:hover {
   font-size: 32px;
 }
 
-
 .identities-text {
   margin: 0;
   padding-left: 0;
   font-size: 30px;
+  position: relative;
+  height: 40px;
+}
+
+.alternating-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  opacity: 0;
 }
 
 /*css for about */ 
@@ -390,7 +394,7 @@ header ul li:hover {
   }
 
   .learn-about-me > button > i {
-    transform: scale(3);
+    scale: 3.5;
   }
 
   .learn-about-me > p {
@@ -401,6 +405,7 @@ header ul li:hover {
 
 
  .identities-text {
+    height: 100px;
     font-size: 48px;
   }
 
@@ -496,3 +501,4 @@ header ul li:hover {
     transform: scale(4);
   }
 }
+
