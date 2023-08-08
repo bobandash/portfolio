@@ -15,14 +15,14 @@ const desktopHeader = (() => {
 
   // changes the color of the header to specific section scrolled on
   function highlightHeaderNameAtSpecificSection(){
-
+    const scrollMarginTop = 100;
     const aboutNavItem = document.querySelector('li[data-nav-about]');
     const projectNavItem = document.querySelector('li[data-nav-project]');
     const contactNavitem = document.querySelector('li[data-nav-contact]')
 
-    const contactSectionY = height.getContactSectionY();
-    const projectSectionY = height.getProjectSectionY();
-    const aboutSectionY  = height.getAboutSectionY();
+    const contactSectionY = height.getContactSectionY() - scrollMarginTop;
+    const projectSectionY = height.getProjectSectionY() - scrollMarginTop;
+    const aboutSectionY  = height.getAboutSectionY() - scrollMarginTop;
     console.log(contactSectionY);
     document.addEventListener("scroll", () => {
       const lastKnownScrollPostion = window.scrollY;
@@ -43,9 +43,10 @@ const desktopHeader = (() => {
     const projectNavItem = document.querySelector('li[data-nav-project]');
     const contactNavitem = document.querySelector('li[data-nav-contact]')
 
-    const contactSectionY = height.getContactSectionY();
-    const projectSectionY = height.getProjectSectionY();
-    const aboutSectionY  = height.getAboutSectionY();
+    const aboutSection = document.querySelector('section.about');
+    const contactSection = document.querySelector('section.contact');
+    const projectSection = document.querySelector('section.projects');
+
 
     topLeftLogo.addEventListener('click', () => {
       unhighlightAllNavItems();
@@ -58,11 +59,10 @@ const desktopHeader = (() => {
 
     aboutNavItem.addEventListener('click', () => {
       unhighlightAllNavItems();
-      window.scrollTo({
-        top: aboutSectionY + 1,
-        left: 0,
+      aboutSection.scrollIntoView({
         behavior: 'smooth',
-      });
+        alignToTop: false,
+      })
       if(!aboutNavItem.classList.contains('highlight')){
         aboutNavItem.classList.add('highlight');
       }
@@ -70,11 +70,10 @@ const desktopHeader = (() => {
 
     projectNavItem.addEventListener('click', () => {
       unhighlightAllNavItems();
-      window.scrollTo({
-        top: projectSectionY + 1,
-        left: 0,
+      projectSection.scrollIntoView({
         behavior: 'smooth',
-      });
+        alignToTop: false,
+      })
       if(!projectNavItem.classList.contains('highlight')){
         projectNavItem.classList.add('highlight');
       }
@@ -82,11 +81,10 @@ const desktopHeader = (() => {
 
     contactNavitem.addEventListener('click', () => {
       unhighlightAllNavItems();
-      window.scrollTo({
-        top: contactSectionY + 1,
-        left: 0,
+      contactSection.scrollIntoView({
         behavior: 'smooth',
-      });
+        alignToTop: true,
+      })
       if(!contactNavitem.classList.contains('highlight')){
         contactNavitem.classList.add('highlight');
       }
@@ -96,12 +94,11 @@ const desktopHeader = (() => {
   function addLearnAboutMeButtonRedirect(){
     const learnAboutMeButton = document.querySelector('.learn-about-me > button');
     learnAboutMeButton.addEventListener('click', () => {
-      const aboutMeSectionHeight = height.getAboutSectionY();
-      window.scrollTo({
-        top: aboutMeSectionHeight + 1,
-        left: 0,
+      const aboutSection = document.querySelector('section.about');
+      aboutSection.scrollIntoView({
         behavior: 'smooth',
-      });
+        alignToTop: false,
+      })
     })
   }
 
