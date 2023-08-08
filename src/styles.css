@@ -95,6 +95,10 @@ aside {
   transition: width 0.1s ease-out;
 }
 
+.hamburger-menu i:hover {
+  cursor: pointer;
+}
+
 aside.hidden {
   width: 0vw;
   visibility: hidden;
@@ -104,10 +108,26 @@ aside.hidden {
   visibility: hidden;
 }
 
+
 .hide-sidebar {
-  position: relative;
-  top: 15;
-  left: 20;
+  background-color: var(--aside-bg-color);
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hide-sidebar i {
+  transform: scale(3);
+}
+
+aside ul li:hover {
+  cursor: pointer;
 }
 
 aside ul {
@@ -309,6 +329,14 @@ header ul li:hover {
 
 .social-links a i {
   transform: scale(1.3);
+}
+
+.contact p > a {
+  color: var(--secondary-color);
+}
+
+.contact p > a:hover {
+  text-decoration: underline;
 }
 
 
