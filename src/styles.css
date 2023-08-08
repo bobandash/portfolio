@@ -219,7 +219,7 @@ header ul li:hover {
 }
 
 .project:nth-of-type(n+3){
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
 .project:nth-last-of-type(1){
