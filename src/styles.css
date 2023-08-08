@@ -289,6 +289,7 @@ header ul li:hover {
 
 /* for the social links */
 
+
 .social-links {
   display: flex;
   margin: 0 auto;
@@ -315,6 +316,10 @@ header ul li:hover {
 
   section {
     min-height: 90vh;
+  }
+
+  .contact {
+    min-height: auto;
   }
 
   header {
@@ -441,6 +446,18 @@ header ul li:hover {
     margin-left: 5px;
   }
 
+  .socials-container {
+    margin-top: 90px;
+  }
+
+  .social-links {
+    margin-top: 75px;
+  }
+
+  .social-links a i {
+    transform: scale(2.5);
+  }
+
 }
 
 
@@ -514,6 +531,8 @@ header ul li:hover {
   .nav-elements ul li:not(:first-child) {
     margin-left: 60px;
   }
+
+
 
   .social-links {
     margin-top: 120px;
