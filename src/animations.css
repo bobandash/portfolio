@@ -40,15 +40,15 @@
 }
 
 .alternating-text:nth-of-type(1){
-  animation: 9s infinite 0s rotate-text;
+  animation: 12s infinite 0s rotate-text;
 }
 
 .alternating-text:nth-of-type(2){
-  animation: 9s infinite 3s rotate-text;
+  animation: 12s infinite 4s rotate-text;
 }
 
 .alternating-text:nth-of-type(3){
-  animation: 9s infinite 6s rotate-text;
+  animation: 12s infinite 8s rotate-text;
 }
 
 .introduction > *.animation-hide {
